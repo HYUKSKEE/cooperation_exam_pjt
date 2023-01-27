@@ -6,21 +6,6 @@ function Test() {
       <div>
         <Image src="images/hands.jpg" alt="" />
       </div>
-      <div>
-        <Image src="images/hands.jpg" alt="" />
-      </div>
-      <div>
-        <Image src="images/hands.jpg" alt="" />
-      </div>
-      <div>
-        <Image src="images/hands.jpg" alt="" />
-      </div>
-      <div>
-        <Image src="images/hands.jpg" alt="" />
-      </div>
-      <div>
-        <Image src="images/hands.jpg" alt="" />
-      </div>
     </Container>
   );
 }
@@ -29,8 +14,8 @@ export default Test;
 
 const Container = styled.div`
   width: 100%;
-  margin: 0px 0px 300px 0px;
-  padding: 100px 0px 100px 0px;
+  /* margin: 0px 0px 300px 0px;
+  padding: 100px 0px 100px 0px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
