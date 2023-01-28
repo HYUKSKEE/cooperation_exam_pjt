@@ -1,27 +1,29 @@
 import styled from 'styled-components';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
-function Test() {
+function Main() {
   return (
     <Container>
-      <Header />
+      {/* <Header /> */}
       <MainWrap>
         <Image src="images/hands.jpg" alt="" />
         <Input type="text" placeholder="이름 입력" />
         <Title> 당신의 협업 능력은 몇 점인가요?</Title>
-        <Button>시작하기</Button>
+        <Link to="/select">
+          <Button>시작하기</Button>
+        </Link>
       </MainWrap>
-      <Footer />
+      {/* <Footer /> */}
     </Container>
   );
 }
 
-export default Test;
+export default Main;
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -30,6 +32,7 @@ const Container = styled.div`
 
 const MainWrap = styled.div`
   display: flex;
+  margin: 50px 0px 50px 0px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -42,7 +45,7 @@ const Image = styled.img`
 `;
 
 const Input = styled.input`
-  width: 220px;
+  width: 240px;
   height: 50px;
   margin: 18px 0px 0px 0px;
   border-radius: 10px;
@@ -56,7 +59,7 @@ const Title = styled.h1`
 `;
 
 const Button = styled.button`
-  width: 220px;
+  width: 240px;
   height: 50px;
   margin: 18px 0px 0px 0px;
   font-size: 20px;
