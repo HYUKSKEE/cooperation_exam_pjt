@@ -4,48 +4,48 @@ import styled from 'styled-components';
 
 function Exam() {
   const [examList, setExamList] = useState({});
-  const [questionNum, setQuestionNum] = useState(1);
+  const [isLoading, setIsLoading] = useState(true);
   const params = useParams();
-
-  const goBackPage = () => {
-    if (questionNum <= 1) return;
-
-    setQuestionNum(prev => prev - 1);
-  };
-
-  const goNextPage = () => {
-    setQuestionNum(prev => prev + 1);
-  };
 
   useEffect(() => {
     fetch(`http://localhost:4000/frontend/${params.id}`)
       .then(res => res.json())
-      .then(setExamList);
-  }, [params]);
+      .then(data => setExamList(data))
+      .then(() => setIsLoading(false));
+  }, [params, isLoading]);
 
   return (
     <Container>
       <Wrap>
-        <Question>
-          {`Q${examList.id} . `}
-          {examList?.question}
-        </Question>
-        {examList?.answer?.map(answer => {
-          return (
-            <Answer key={answer.id}>
-              {answer.id}. {answer.text}
-            </Answer>
-          );
-        })}
-
-        <ButtonBox>
-          <Link to={`/question/${params.id > 1 ? Number(params.id) - 1 : 1}`}>
-            <Btn>{`< PREV`}</Btn>
-          </Link>
-          <Link to={`/question/${params.id < 15 ? Number(params.id) + 1 : 15}`}>
-            <Btn>{`NEXT >`}</Btn>
-          </Link>
-        </ButtonBox>
+        {isLoading ? (
+          <Loading>Loading..</Loading>
+        ) : (
+          <>
+            <Question>
+              {`Q${examList.id} . `}
+              {examList?.question}
+            </Question>
+            {examList?.answer?.map(answer => {
+              return (
+                <Answer key={answer.id}>
+                  {answer.id}. {answer.text}
+                </Answer>
+              );
+            })}
+            <ButtonBox>
+              <Link
+                to={`/question/${params.id > 1 ? Number(params.id) - 1 : 1}`}
+              >
+                <Btn>{`< PREV`}</Btn>
+              </Link>
+              <Link
+                to={`/question/${params.id < 15 ? Number(params.id) + 1 : 15}`}
+              >
+                <Btn>{`NEXT >`}</Btn>
+              </Link>
+            </ButtonBox>
+          </>
+        )}
       </Wrap>
     </Container>
   );
@@ -66,10 +66,19 @@ const Wrap = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
+
+const Loading = styled.h1`
+  margin: 30px;
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+`;
+
 const Question = styled.div`
   margin: 20px 0px 20px 0px;
   white-space: pre-wrap;
 `;
+
 const Answer = styled.button`
   margin: 0px 0px 10px 0px;
   padding: 0px 0px 0px 10px;
@@ -86,6 +95,7 @@ const Answer = styled.button`
     transform: scale(1.05);
   }
 `;
+
 const ButtonBox = styled.div`
   width: 100%;
   margin: 10px 0px 20px 0px;
@@ -93,6 +103,7 @@ const ButtonBox = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
+
 const Btn = styled.button`
   margin: 10px 0px 20px 0px;
   padding: 0px 10px 0px 10px;
