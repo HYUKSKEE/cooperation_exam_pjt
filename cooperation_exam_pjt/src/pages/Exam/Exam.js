@@ -1,40 +1,50 @@
 import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 function Exam() {
-  const [examList, setExamList] = useState([]);
+  const [examList, setExamList] = useState({});
+  const [questionNum, setQuestionNum] = useState(1);
+  const params = useParams();
+
+  const goBackPage = () => {
+    if (questionNum <= 1) return;
+
+    setQuestionNum(prev => prev - 1);
+  };
+
+  const goNextPage = () => {
+    setQuestionNum(prev => prev + 1);
+  };
 
   useEffect(() => {
-    fetch('/data/data.json')
+    fetch(`http://localhost:4000/frontend/${params.id}`)
       .then(res => res.json())
       .then(setExamList);
-  }, []);
+  }, [params]);
+
   return (
     <Container>
       <Wrap>
-        {/* {examList.map(list => {
-          return (
-            <>
-              <Question>{list.question}</Question>
-              {list.answer.map(answer => {
-                return <Answer key={answer.id}>{answer.text}</Answer>;
-              })}
-            </>
-          );
-        })} */}
-
-        {/* test html structure */}
-        <Question>{examList?.[0]?.question}</Question>
-        {examList?.[0]?.answer.map(answer => {
+        <Question>
+          {`Q${examList.id} . `}
+          {examList?.question}
+        </Question>
+        {examList?.answer?.map(answer => {
           return (
             <Answer key={answer.id}>
               {answer.id}. {answer.text}
             </Answer>
           );
         })}
+
         <ButtonBox>
-          <Btn>{`< PREV`}</Btn>
-          <Btn>{`NEXT >`}</Btn>
+          <Link to={`/question/${params.id > 1 ? Number(params.id) - 1 : 1}`}>
+            <Btn>{`< PREV`}</Btn>
+          </Link>
+          <Link to={`/question/${Number(params.id) + 1}`}>
+            <Btn>{`NEXT >`}</Btn>
+          </Link>
         </ButtonBox>
       </Wrap>
     </Container>
@@ -44,7 +54,7 @@ function Exam() {
 export default Exam;
 
 const Container = styled.div`
-  width: 40%;
+  width: 80%;
   border-radius: 44px;
   background-color: #ebe9e9;
 `;
@@ -58,6 +68,7 @@ const Wrap = styled.div`
 `;
 const Question = styled.div`
   margin: 20px 0px 20px 0px;
+  white-space: pre-wrap;
 `;
 const Answer = styled.button`
   margin: 0px 0px 10px 0px;
