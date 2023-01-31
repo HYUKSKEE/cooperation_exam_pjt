@@ -14,7 +14,7 @@ const Router = () => {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/select" element={<Select />} />
-          <Route path="/question" element={<Exam />} />
+          <Route path="/question/:id" element={<Exam />} />
         </Routes>
         <Footer />
       </Wrap>

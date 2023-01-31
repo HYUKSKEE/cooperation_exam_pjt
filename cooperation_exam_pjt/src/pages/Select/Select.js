@@ -8,7 +8,7 @@ function Select() {
         <SelectBtn>백</SelectBtn>
         <SelectBtn>프</SelectBtn>
       </SelectBtnBox>
-      <Link to="/question">
+      <Link to="/question/1">
         <NextBtn>NEXT</NextBtn>
       </Link>
     </Container>
