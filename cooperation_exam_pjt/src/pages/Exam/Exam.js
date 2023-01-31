@@ -42,7 +42,7 @@ function Exam() {
           <Link to={`/question/${params.id > 1 ? Number(params.id) - 1 : 1}`}>
             <Btn>{`< PREV`}</Btn>
           </Link>
-          <Link to={`/question/${Number(params.id) + 1}`}>
+          <Link to={`/question/${params.id < 15 ? Number(params.id) + 1 : 15}`}>
             <Btn>{`NEXT >`}</Btn>
           </Link>
         </ButtonBox>
