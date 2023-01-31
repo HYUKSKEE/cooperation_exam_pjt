@@ -5,7 +5,17 @@ import styled from 'styled-components';
 function Exam() {
   const [examList, setExamList] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [checkedNum, isCheckedNum] = useState(0);
   const params = useParams();
+
+  const checkAnswer = CheckNum => {
+    isCheckedNum(CheckNum);
+  };
+
+  const postAnswer = () => {
+    if (checkedNum === 0) return;
+    console.log(`post ${checkedNum}번`);
+  };
 
   useEffect(() => {
     fetch(`http://localhost:4000/frontend/${params.id}`)
@@ -27,7 +37,7 @@ function Exam() {
             </Question>
             {examList?.answer?.map(answer => {
               return (
-                <Answer key={answer.id}>
+                <Answer key={answer.id} onClick={() => checkAnswer(answer.id)}>
                   {answer.id}. {answer.text}
                 </Answer>
               );
@@ -41,7 +51,7 @@ function Exam() {
               <Link
                 to={`/question/${params.id < 15 ? Number(params.id) + 1 : 15}`}
               >
-                <Btn>{`NEXT >`}</Btn>
+                <Btn onClick={postAnswer}>{`NEXT >`}</Btn>
               </Link>
             </ButtonBox>
           </>
@@ -54,7 +64,7 @@ function Exam() {
 export default Exam;
 
 const Container = styled.div`
-  width: 80%;
+  width: 70%;
   border-radius: 44px;
   background-color: #ebe9e9;
 `;
@@ -81,9 +91,8 @@ const Question = styled.div`
 
 const Answer = styled.button`
   margin: 0px 0px 10px 0px;
-  padding: 0px 0px 0px 10px;
+  padding: 10px;
   width: 100%;
-  height: 35px;
   text-align: left;
   border: none;
   border-radius: 10px;
