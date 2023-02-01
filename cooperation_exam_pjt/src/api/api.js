@@ -6,6 +6,6 @@ export const getPosts = async () => {
 };
 
 export const getPostById = async id => {
-  const response = await axios.get(`http://localhost:4000/frontend/${id}`);
+  const response = await axios.post(`http://localhost:4000/frontend/${id}`);
   return response.data;
 };

@@ -3,12 +3,18 @@ import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 function Exam() {
-  const [examList, setExamList] = useState({});
+  const [examList, setExamList] = useState<any>({});
   const [isLoading, setIsLoading] = useState(true);
   const [checkedNum, isCheckedNum] = useState(0);
-  const params = useParams();
+  const { id } = useParams();
 
-  const checkAnswer = CheckNum => {
+  type examList = {
+    id: number;
+    answer: string[];
+    imageUrl: string;
+  };
+
+  const checkAnswer = (CheckNum: number) => {
     isCheckedNum(CheckNum);
   };
 
@@ -18,11 +24,11 @@ function Exam() {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:4000/frontend/${params.id}`)
-      .then(res => res.json())
-      .then(data => setExamList(data))
+    fetch(`http://localhost:4000/frontend/${Number(id)}`)
+      .then((res) => res.json())
+      .then((data) => setExamList(data))
       .then(() => setIsLoading(false));
-  }, [params, isLoading]);
+  }, [id, isLoading]);
 
   return (
     <Container>
@@ -35,7 +41,8 @@ function Exam() {
               {`Q${examList.id} . `}
               {examList?.question}
             </Question>
-            {examList?.answer?.map(answer => {
+            {examList.imageUrl && <Image src={examList.imageUrl} alt="" />}
+            {examList?.answer?.map((answer: any) => {
               return (
                 <Answer key={answer.id} onClick={() => checkAnswer(answer.id)}>
                   {answer.id}. {answer.text}
@@ -43,14 +50,10 @@ function Exam() {
               );
             })}
             <ButtonBox>
-              <Link
-                to={`/question/${params.id > 1 ? Number(params.id) - 1 : 1}`}
-              >
+              <Link to={`/question/${Number(id) > 1 ? Number(id) - 1 : 1}`}>
                 <Btn>{`< PREV`}</Btn>
               </Link>
-              <Link
-                to={`/question/${params.id < 15 ? Number(params.id) + 1 : 15}`}
-              >
+              <Link to={`/question/${Number(id) < 15 ? Number(id) + 1 : 15}`}>
                 <Btn onClick={postAnswer}>{`NEXT >`}</Btn>
               </Link>
             </ButtonBox>
@@ -89,6 +92,11 @@ const Question = styled.div`
   white-space: pre-wrap;
 `;
 
+const Image = styled.img`
+  width: 100%;
+  margin: 0px 0px 20px 0px;
+`;
+
 const Answer = styled.button`
   margin: 0px 0px 10px 0px;
   padding: 10px;
@@ -101,7 +109,7 @@ const Answer = styled.button`
   cursor: pointer;
 
   :hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 `;
 
