@@ -47,7 +47,7 @@ it('renders user data', async () => {
 
   // resolved promises를 적용하려면 `act()`의 비동기 버전을 사용하세요.
   await act(async () => {
-    render(<Test id="123" />, container);
+    render(<Test />, container);
   });
 
   expect(container.querySelector('summary').textContent).toBe(fakeData.id);

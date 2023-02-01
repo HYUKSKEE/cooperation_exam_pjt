@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Exam from './pages/Exam/Exam';
+import Result from './pages/Result/Result';
 
 const Router = (): JSX.Element => {
   return (
@@ -15,6 +16,7 @@ const Router = (): JSX.Element => {
           <Route path="/" element={<Main />} />
           <Route path="/select" element={<Select />} />
           <Route path="/question/:id" element={<Exam />} />
+          <Route path="/result" element={<Result />} />
         </Routes>
         <Footer />
       </Wrap>
