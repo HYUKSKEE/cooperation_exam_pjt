@@ -1,12 +1,10 @@
 import styled from 'styled-components';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+
 import { Link } from 'react-router-dom';
 
 function Main() {
   return (
     <Container>
-      {/* <Header /> */}
       <MainWrap>
         <Image src="images/hands.jpg" alt="" />
         <Input type="text" placeholder="이름 입력" />
@@ -15,7 +13,6 @@ function Main() {
           <Button>시작하기</Button>
         </Link>
       </MainWrap>
-      {/* <Footer /> */}
     </Container>
   );
 }

@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Exam from './pages/Exam/Exam';
 
-const Router = () => {
+const Router = (): JSX.Element => {
   return (
     <BrowserRouter>
       <Wrap>
