@@ -54,7 +54,7 @@ function Exam() {
                 <Btn>{`< PREV`}</Btn>
               </Link>
               <Link
-                to={`/question/${Number(id) < 15 ? Number(id) + 1 : '/result'}`}
+                to={Number(id) < 15 ? `/question/${Number(id) + 1}` : '/result'}
               >
                 <Btn onClick={postAnswer}>{`NEXT >`}</Btn>
               </Link>
