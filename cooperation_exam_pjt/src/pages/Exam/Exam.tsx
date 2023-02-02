@@ -20,7 +20,15 @@ function Exam() {
 
   const postAnswer = () => {
     if (checkedNum === 0) return;
-    console.log(`post ${checkedNum}번`);
+    fetch(`http://localhost:4000/checked/${id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        answerNum: Number(checkedNum),
+      }),
+    })
+      .then((response) => response.json())
+      .then((result) => console.log(result));
   };
 
   useEffect(() => {
@@ -108,6 +116,7 @@ const Answer = styled.button`
   border-radius: 10px;
   color: white;
   background-color: orange;
+  opacity: 0.6;
   cursor: pointer;
 
   :hover {
