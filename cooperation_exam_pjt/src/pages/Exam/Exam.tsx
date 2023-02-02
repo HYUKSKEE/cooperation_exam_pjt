@@ -1,40 +1,53 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 function Exam() {
-  const [examList, setExamList] = useState<any>({});
+  const [examList, setExamList] = useState<examListData>();
   const [isLoading, setIsLoading] = useState(true);
-  const [checkedNum, isCheckedNum] = useState(0);
+  const [checkedNum, setCheckedNum] = useState<number>();
   const { id } = useParams();
+  const navigate = useNavigate();
 
-  type examList = {
-    id: number;
-    answer: string[];
+  type examListData = {
+    id: Number;
+    title: string;
+    question: string;
     imageUrl: string;
+    answer: string[];
+    isChecked: number;
   };
 
-  const checkAnswer = (CheckNum: number) => {
-    isCheckedNum(CheckNum);
-  };
+  const postAnswer = (CheckNum: number) => {
+    setCheckedNum(CheckNum);
 
-  const postAnswer = () => {
-    if (checkedNum === 0) return;
-    fetch(`http://localhost:4000/checked/${id}`, {
+    fetch(`http://localhost:4000/frontend/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        answerNum: Number(checkedNum),
+        isChecked: CheckNum,
       }),
     })
       .then((response) => response.json())
       .then((result) => console.log(result));
   };
 
+  const goNextLink = () => {
+    {
+      Number(id) < 15
+        ? navigate(`/question/${Number(id) + 1}`)
+        : navigate('/result');
+    }
+  };
+
+  const goPrevLink = () => {
+    navigate(`/question/${Number(id) - 1}`);
+  };
+
   useEffect(() => {
     fetch(`http://localhost:4000/frontend/${Number(id)}`)
       .then((res) => res.json())
-      .then((data) => setExamList(data))
+      .then((data) => (setExamList(data), setCheckedNum(data.isChecked)))
       .then(() => setIsLoading(false));
   }, [id, isLoading]);
 
@@ -46,26 +59,24 @@ function Exam() {
         ) : (
           <>
             <Question>
-              {`Q${examList.id} . `}
+              {`Q${examList?.id} . `}
               {examList?.question}
             </Question>
-            {examList.imageUrl && <Image src={examList.imageUrl} alt="" />}
+            {examList?.imageUrl && <Image src={examList?.imageUrl} alt="" />}
             {examList?.answer?.map((answer: any) => {
               return (
-                <Answer key={answer.id} onClick={() => checkAnswer(answer.id)}>
+                <Answer
+                  key={answer.id}
+                  onClick={() => postAnswer(answer.id)}
+                  active={answer.id === checkedNum ? true : false}
+                >
                   {answer.id}. {answer.text}
                 </Answer>
               );
             })}
             <ButtonBox>
-              <Link to={`/question/${Number(id) > 1 ? Number(id) - 1 : 1}`}>
-                <Btn>{`< PREV`}</Btn>
-              </Link>
-              <Link
-                to={Number(id) < 15 ? `/question/${Number(id) + 1}` : '/result'}
-              >
-                <Btn onClick={postAnswer}>{`NEXT >`}</Btn>
-              </Link>
+              {Number(id) !== 1 && <Btn onClick={goPrevLink}>{`< PREV`}</Btn>}
+              {checkedNum !== 0 && <Btn onClick={goNextLink}>{`NEXT >`}</Btn>}
             </ButtonBox>
           </>
         )}
@@ -107,7 +118,7 @@ const Image = styled.img`
   margin: 0px 0px 20px 0px;
 `;
 
-const Answer = styled.button`
+const Answer = styled.button<{ active: boolean }>`
   margin: 0px 0px 10px 0px;
   padding: 10px;
   width: 100%;
@@ -115,8 +126,7 @@ const Answer = styled.button`
   border: none;
   border-radius: 10px;
   color: white;
-  background-color: orange;
-  opacity: 0.6;
+  background-color: ${({ active }) => (active ? 'green' : 'orange')};
   cursor: pointer;
 
   :hover {
@@ -128,14 +138,13 @@ const ButtonBox = styled.div`
   width: 100%;
   margin: 10px 0px 20px 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 `;
 
 const Btn = styled.button`
-  margin: 10px 0px 20px 0px;
-  padding: 0px 10px 0px 10px;
-  height: 30px;
+  margin: 20px 50px;
+  padding: 10px;
   text-align: left;
   border: none;
   border-radius: 10px;
