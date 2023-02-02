@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 function Exam() {
   const [examList, setExamList] = useState<examListData>();
   const [isLoading, setIsLoading] = useState(true);
   const [checkedNum, setCheckedNum] = useState<number>();
-  const { id } = useParams();
+  const params = useParams();
   const navigate = useNavigate();
 
+  console.log('id:', params);
   type examListData = {
     id: Number;
     title: string;
@@ -21,7 +22,7 @@ function Exam() {
   const postAnswer = (CheckNum: number) => {
     setCheckedNum(CheckNum);
 
-    fetch(`http://localhost:4000/frontend/${id}`, {
+    fetch(`http://localhost:4000/${params.type}/${params.id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -34,22 +35,22 @@ function Exam() {
 
   const goNextLink = () => {
     {
-      Number(id) < 15
-        ? navigate(`/question/${Number(id) + 1}`)
+      Number(params) < 15
+        ? navigate(`/question/${Number(params) + 1}`)
         : navigate('/result');
     }
   };
 
   const goPrevLink = () => {
-    navigate(`/question/${Number(id) - 1}`);
+    navigate(`/question/${Number(params) - 1}`);
   };
 
   useEffect(() => {
-    fetch(`http://localhost:4000/frontend/${Number(id)}`)
+    fetch(`http://localhost:4000/frontend/${Number(params.id)}`)
       .then((res) => res.json())
       .then((data) => (setExamList(data), setCheckedNum(data.isChecked)))
       .then(() => setIsLoading(false));
-  }, [id, isLoading]);
+  }, [params, isLoading]);
 
   return (
     <Container>
@@ -75,7 +76,9 @@ function Exam() {
               );
             })}
             <ButtonBox>
-              {Number(id) !== 1 && <Btn onClick={goPrevLink}>{`< PREV`}</Btn>}
+              {Number(params.id) !== 1 && (
+                <Btn onClick={goPrevLink}>{`< PREV`}</Btn>
+              )}
               {checkedNum !== 0 && <Btn onClick={goNextLink}>{`NEXT >`}</Btn>}
             </ButtonBox>
           </>
@@ -126,7 +129,7 @@ const Answer = styled.button<{ active: boolean }>`
   border: none;
   border-radius: 10px;
   color: white;
-  background-color: ${({ active }) => (active ? 'green' : 'orange')};
+  background-color: ${({ active }) => (active ? '#81c147' : 'orange')};
   cursor: pointer;
 
   :hover {
