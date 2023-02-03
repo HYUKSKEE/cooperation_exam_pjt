@@ -8,26 +8,31 @@
       "answer": [
         {
           "id": 1,
-          "text": "가능합니다 불가능하지 않아요 해봐요."
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
         },
         {
           "id": 2,
-          "text": "못해 안해 불가능해."
+          "text": "못해 안해 불가능해.",
+          "score": 2
         },
         {
           "id": 3,
-          "text": "님이 해보셈."
+          "text": "님이 해보셈.",
+          "score": 1
         },
         {
           "id": 4,
-          "text": "오늘 그만 두겠습니다."
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
         },
         {
           "id": 5,
-          "text": "제가 알려줄테니까 해보실?"
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
         }
       ],
-      "isChecked": 1
+      "isChecked": 4
     },
     {
       "id": 2,
@@ -37,26 +42,31 @@
       "answer": [
         {
           "id": 1,
-          "text": "가능합니다 불가능하지 않아요 해봐요."
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
         },
         {
           "id": 2,
-          "text": "못해 안해 불가능해."
+          "text": "못해 안해 불가능해.",
+          "score": 2
         },
         {
           "id": 3,
-          "text": "님이 해보셈."
+          "text": "님이 해보셈.",
+          "score": 1
         },
         {
           "id": 4,
-          "text": "오늘 그만 두겠습니다."
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
         },
         {
           "id": 5,
-          "text": "제가 알려줄테니까 해보실?"
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
         }
       ],
-      "isChecked": 2
+      "isChecked": 4
     },
     {
       "id": 3,
@@ -65,26 +75,31 @@
       "answer": [
         {
           "id": 1,
-          "text": "가능합니다 불가능하지 않아요 해봐요."
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
         },
         {
           "id": 2,
-          "text": "못해 안해 불가능해."
+          "text": "못해 안해 불가능해.",
+          "score": 2
         },
         {
           "id": 3,
-          "text": "님이 해보셈."
+          "text": "님이 해보셈.",
+          "score": 1
         },
         {
           "id": 4,
-          "text": "오늘 그만 두겠습니다."
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
         },
         {
           "id": 5,
-          "text": "제가 알려줄테니까 해보실?"
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
         }
       ],
-      "isChecked": 1
+      "isChecked": 4
     },
     {
       "id": 4,
@@ -94,23 +109,28 @@
       "answer": [
         {
           "id": 1,
-          "text": "가능합니다 불가능하지 않아요 해봐요."
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
         },
         {
           "id": 2,
-          "text": "못해 안해 불가능해."
+          "text": "못해 안해 불가능해.",
+          "score": 2
         },
         {
           "id": 3,
-          "text": "님이 해보셈."
+          "text": "님이 해보셈.",
+          "score": 1
         },
         {
           "id": 4,
-          "text": "오늘 그만 두겠습니다."
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
         },
         {
           "id": 5,
-          "text": "제가 알려줄테니까 해보실?"
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
         }
       ],
       "isChecked": 4
@@ -123,23 +143,28 @@
       "answer": [
         {
           "id": 1,
-          "text": "가능합니다 불가능하지 않아요 해봐요."
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
         },
         {
           "id": 2,
-          "text": "못해 안해 불가능해."
+          "text": "못해 안해 불가능해.",
+          "score": 2
         },
         {
           "id": 3,
-          "text": "님이 해보셈."
+          "text": "님이 해보셈.",
+          "score": 1
         },
         {
           "id": 4,
-          "text": "오늘 그만 두겠습니다."
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
         },
         {
           "id": 5,
-          "text": "제가 알려줄테니까 해보실?"
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
         }
       ],
       "isChecked": 4
@@ -151,26 +176,31 @@
       "answer": [
         {
           "id": 1,
-          "text": "가능합니다 불가능하지 않아요 해봐요."
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
         },
         {
           "id": 2,
-          "text": "못해 안해 불가능해."
+          "text": "못해 안해 불가능해.",
+          "score": 2
         },
         {
           "id": 3,
-          "text": "님이 해보셈."
+          "text": "님이 해보셈.",
+          "score": 1
         },
         {
           "id": 4,
-          "text": "오늘 그만 두겠습니다."
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
         },
         {
           "id": 5,
-          "text": "제가 알려줄테니까 해보실?"
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
         }
       ],
-      "isChecked": 5
+      "isChecked": 4
     },
     {
       "id": 7,
@@ -179,23 +209,28 @@
       "answer": [
         {
           "id": 1,
-          "text": "가능합니다 불가능하지 않아요 해봐요."
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
         },
         {
           "id": 2,
-          "text": "못해 안해 불가능해."
+          "text": "못해 안해 불가능해.",
+          "score": 2
         },
         {
           "id": 3,
-          "text": "님이 해보셈."
+          "text": "님이 해보셈.",
+          "score": 1
         },
         {
           "id": 4,
-          "text": "오늘 그만 두겠습니다."
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
         },
         {
           "id": 5,
-          "text": "제가 알려줄테니까 해보실?"
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
         }
       ],
       "isChecked": 4
@@ -208,26 +243,31 @@
       "answer": [
         {
           "id": 1,
-          "text": "가능합니다 불가능하지 않아요 해봐요."
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
         },
         {
           "id": 2,
-          "text": "못해 안해 불가능해."
+          "text": "못해 안해 불가능해.",
+          "score": 2
         },
         {
           "id": 3,
-          "text": "님이 해보셈."
+          "text": "님이 해보셈.",
+          "score": 1
         },
         {
           "id": 4,
-          "text": "오늘 그만 두겠습니다."
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
         },
         {
           "id": 5,
-          "text": "제가 알려줄테니까 해보실?"
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
         }
       ],
-      "isChecked": 2
+      "isChecked": 4
     },
     {
       "id": 9,
@@ -236,23 +276,28 @@
       "answer": [
         {
           "id": 1,
-          "text": "가능합니다 불가능하지 않아요 해봐요."
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
         },
         {
           "id": 2,
-          "text": "못해 안해 불가능해."
+          "text": "못해 안해 불가능해.",
+          "score": 2
         },
         {
           "id": 3,
-          "text": "님이 해보셈."
+          "text": "님이 해보셈.",
+          "score": 1
         },
         {
           "id": 4,
-          "text": "오늘 그만 두겠습니다."
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
         },
         {
           "id": 5,
-          "text": "제가 알려줄테니까 해보실?"
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
         }
       ],
       "isChecked": 4
@@ -265,26 +310,31 @@
       "answer": [
         {
           "id": 1,
-          "text": "가능합니다 불가능하지 않아요 해봐요."
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
         },
         {
           "id": 2,
-          "text": "못해 안해 불가능해."
+          "text": "못해 안해 불가능해.",
+          "score": 2
         },
         {
           "id": 3,
-          "text": "님이 해보셈."
+          "text": "님이 해보셈.",
+          "score": 1
         },
         {
           "id": 4,
-          "text": "오늘 그만 두겠습니다."
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
         },
         {
           "id": 5,
-          "text": "제가 알려줄테니까 해보실?"
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
         }
       ],
-      "isChecked": 2
+      "isChecked": 4
     },
     {
       "id": 11,
@@ -293,23 +343,28 @@
       "answer": [
         {
           "id": 1,
-          "text": "가능합니다 불가능하지 않아요 해봐요."
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
         },
         {
           "id": 2,
-          "text": "못해 안해 불가능해."
+          "text": "못해 안해 불가능해.",
+          "score": 2
         },
         {
           "id": 3,
-          "text": "님이 해보셈."
+          "text": "님이 해보셈.",
+          "score": 1
         },
         {
           "id": 4,
-          "text": "오늘 그만 두겠습니다."
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
         },
         {
           "id": 5,
-          "text": "제가 알려줄테니까 해보실?"
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
         }
       ],
       "isChecked": 4
@@ -321,26 +376,31 @@
       "answer": [
         {
           "id": 1,
-          "text": "가능합니다 불가능하지 않아요 해봐요."
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
         },
         {
           "id": 2,
-          "text": "못해 안해 불가능해."
+          "text": "못해 안해 불가능해.",
+          "score": 2
         },
         {
           "id": 3,
-          "text": "님이 해보셈."
+          "text": "님이 해보셈.",
+          "score": 1
         },
         {
           "id": 4,
-          "text": "오늘 그만 두겠습니다."
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
         },
         {
           "id": 5,
-          "text": "제가 알려줄테니까 해보실?"
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
         }
       ],
-      "isChecked": 3
+      "isChecked": 4
     },
     {
       "id": 13,
@@ -349,23 +409,28 @@
       "answer": [
         {
           "id": 1,
-          "text": "가능합니다 불가능하지 않아요 해봐요."
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
         },
         {
           "id": 2,
-          "text": "못해 안해 불가능해."
+          "text": "못해 안해 불가능해.",
+          "score": 2
         },
         {
           "id": 3,
-          "text": "님이 해보셈."
+          "text": "님이 해보셈.",
+          "score": 1
         },
         {
           "id": 4,
-          "text": "오늘 그만 두겠습니다."
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
         },
         {
           "id": 5,
-          "text": "제가 알려줄테니까 해보실?"
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
         }
       ],
       "isChecked": 4
@@ -377,26 +442,31 @@
       "answer": [
         {
           "id": 1,
-          "text": "가능합니다 불가능하지 않아요 해봐요."
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
         },
         {
           "id": 2,
-          "text": "못해 안해 불가능해."
+          "text": "못해 안해 불가능해.",
+          "score": 2
         },
         {
           "id": 3,
-          "text": "님이 해보셈."
+          "text": "님이 해보셈.",
+          "score": 1
         },
         {
           "id": 4,
-          "text": "오늘 그만 두겠습니다."
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
         },
         {
           "id": 5,
-          "text": "제가 알려줄테니까 해보실?"
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
         }
       ],
-      "isChecked": 3
+      "isChecked": 4
     },
     {
       "id": 15,
@@ -405,418 +475,534 @@
       "answer": [
         {
           "id": 1,
-          "text": "가능합니다 불가능하지 않아요 해봐요."
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
         },
         {
           "id": 2,
-          "text": "못해 안해 불가능해."
+          "text": "못해 안해 불가능해.",
+          "score": 2
         },
         {
           "id": 3,
-          "text": "님이 해보셈."
+          "text": "님이 해보셈.",
+          "score": 1
         },
         {
           "id": 4,
-          "text": "오늘 그만 두겠습니다."
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
         },
         {
           "id": 5,
-          "text": "제가 알려줄테니까 해보실?"
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
         }
       ],
       "isChecked": 4
     }
   ],
-  "checked": [
+  "backend": [
     {
-      "answerScore": [
+      "id": 1,
+      "title": "1. Question",
+      "question": "다음 상황에서 올바른 표현은?",
+      "imageUrl": "https://d1orkkc34keaka.cloudfront.net/images/2022/06/21/1655785851_9EDB26BqzeGDKUunhVJBSNKMtGWGrFSTVrhaQuAe.jpeg",
+      "answer": [
         {
-          "answer": 1,
+          "id": 1,
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
           "score": 3
         },
         {
-          "answer": 2,
-          "score": 1
-        },
-        {
-          "answer": 3,
+          "id": 2,
+          "text": "못해 안해 불가능해.",
           "score": 2
         },
         {
-          "answer": 4,
-          "score": 5
-        },
-        {
-          "answer": 5,
-          "score": 4
-        }
-      ],
-      "answerNum": 3,
-      "id": 1
-    },
-    {
-      "answerScore": [
-        {
-          "answer": 1,
+          "id": 3,
+          "text": "님이 해보셈.",
           "score": 1
         },
         {
-          "answer": 2,
+          "id": 4,
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
+        },
+        {
+          "id": 5,
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
+        }
+      ],
+      "isChecked": 0
+    },
+    {
+      "id": 2,
+      "title": "2. Question",
+      "question": "다음 상황에서 올바른 표현은?",
+      "imageUrl": "https://d1orkkc34keaka.cloudfront.net/images/2022/06/21/1655785851_9EDB26BqzeGDKUunhVJBSNKMtGWGrFSTVrhaQuAe.jpeg",
+      "answer": [
+        {
+          "id": 1,
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
           "score": 3
         },
         {
-          "answer": 3,
+          "id": 2,
+          "text": "못해 안해 불가능해.",
           "score": 2
         },
         {
-          "answer": 4,
-          "score": 4
-        },
-        {
-          "answer": 5,
-          "score": 5
-        }
-      ],
-      "answerNum": 0,
-      "id": 2
-    },
-    {
-      "answerScore": [
-        {
-          "answer": 1,
+          "id": 3,
+          "text": "님이 해보셈.",
           "score": 1
         },
         {
-          "answer": 2,
+          "id": 4,
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
+        },
+        {
+          "id": 5,
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
+        }
+      ],
+      "isChecked": 0
+    },
+    {
+      "id": 3,
+      "title": "3. Question",
+      "question": "이거 버튼 여기로 옯기는거 가능할까요?",
+      "answer": [
+        {
+          "id": 1,
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
           "score": 3
         },
         {
-          "answer": 3,
+          "id": 2,
+          "text": "못해 안해 불가능해.",
           "score": 2
         },
         {
-          "answer": 4,
-          "score": 4
-        },
-        {
-          "answer": 5,
-          "score": 5
-        }
-      ],
-      "answerNum": 0,
-      "id": 3
-    },
-    {
-      "answerScore": [
-        {
-          "answer": 1,
+          "id": 3,
+          "text": "님이 해보셈.",
           "score": 1
         },
         {
-          "answer": 2,
+          "id": 4,
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
+        },
+        {
+          "id": 5,
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
+        }
+      ],
+      "isChecked": 0
+    },
+    {
+      "id": 4,
+      "title": "4. Question",
+      "question": "매뉴바 왼쪽으로 하는거 어때요?",
+      "imageUrl": "https://d1orkkc34keaka.cloudfront.net/images/2022/06/21/1655785851_9EDB26BqzeGDKUunhVJBSNKMtGWGrFSTVrhaQuAe.jpeg",
+      "answer": [
+        {
+          "id": 1,
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
           "score": 3
         },
         {
-          "answer": 3,
+          "id": 2,
+          "text": "못해 안해 불가능해.",
           "score": 2
         },
         {
-          "answer": 4,
-          "score": 4
-        },
-        {
-          "answer": 5,
-          "score": 5
-        }
-      ],
-      "answerNum": 0,
-      "id": 4
-    },
-    {
-      "answerScore": [
-        {
-          "answer": 1,
+          "id": 3,
+          "text": "님이 해보셈.",
           "score": 1
         },
         {
-          "answer": 2,
-          "score": 4
-        },
-        {
-          "answer": 3,
+          "id": 4,
+          "text": "오늘 그만 두겠습니다.",
           "score": 5
         },
         {
-          "answer": 4,
+          "id": 5,
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
+        }
+      ],
+      "isChecked": 0
+    },
+    {
+      "id": 5,
+      "title": "5. Question",
+      "question": "우리 사이트도 채팅기능 넣으면 좋을 것 같은데 가능할까요?",
+      "imageUrl": "https://d1orkkc34keaka.cloudfront.net/images/2022/06/21/1655785851_9EDB26BqzeGDKUunhVJBSNKMtGWGrFSTVrhaQuAe.jpeg",
+      "answer": [
+        {
+          "id": 1,
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
           "score": 3
         },
         {
-          "answer": 5,
+          "id": 2,
+          "text": "못해 안해 불가능해.",
           "score": 2
-        }
-      ],
-      "answerNum": 0,
-      "id": 5
-    },
-    {
-      "answerScore": [
+        },
         {
-          "answer": 1,
+          "id": 3,
+          "text": "님이 해보셈.",
           "score": 1
         },
         {
-          "answer": 2,
-          "score": 4
-        },
-        {
-          "answer": 3,
+          "id": 4,
+          "text": "오늘 그만 두겠습니다.",
           "score": 5
         },
         {
-          "answer": 4,
+          "id": 5,
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
+        }
+      ],
+      "isChecked": 0
+    },
+    {
+      "id": 6,
+      "title": "6. Question",
+      "question": "혹시 전에 시안 드린거 언제 완성될까요?",
+      "answer": [
+        {
+          "id": 1,
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
           "score": 3
         },
         {
-          "answer": 5,
+          "id": 2,
+          "text": "못해 안해 불가능해.",
           "score": 2
-        }
-      ],
-      "answerNum": 0,
-      "id": 6
-    },
-    {
-      "answerScore": [
+        },
         {
-          "answer": 1,
+          "id": 3,
+          "text": "님이 해보셈.",
           "score": 1
         },
         {
-          "answer": 2,
+          "id": 4,
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
+        },
+        {
+          "id": 5,
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
+        }
+      ],
+      "isChecked": 0
+    },
+    {
+      "id": 7,
+      "title": "7. Question",
+      "question": "OO님 그때 말씀해주신 기획 세미나 가능할까요?",
+      "answer": [
+        {
+          "id": 1,
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
           "score": 3
         },
         {
-          "answer": 3,
+          "id": 2,
+          "text": "못해 안해 불가능해.",
           "score": 2
         },
         {
-          "answer": 4,
-          "score": 4
-        },
-        {
-          "answer": 5,
-          "score": 5
-        }
-      ],
-      "answerNum": 0,
-      "id": 7
-    },
-    {
-      "answerScore": [
-        {
-          "answer": 1,
+          "id": 3,
+          "text": "님이 해보셈.",
           "score": 1
         },
         {
-          "answer": 2,
+          "id": 4,
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
+        },
+        {
+          "id": 5,
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
+        }
+      ],
+      "isChecked": 0
+    },
+    {
+      "id": 8,
+      "title": "8. Question",
+      "question": "OO님 이거 변수명 ...로 바꾸는게 좋을 것 같아요",
+      "imageUrl": "https://d1orkkc34keaka.cloudfront.net/images/2022/06/21/1655785851_9EDB26BqzeGDKUunhVJBSNKMtGWGrFSTVrhaQuAe.jpeg",
+      "answer": [
+        {
+          "id": 1,
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
           "score": 3
         },
         {
-          "answer": 3,
+          "id": 2,
+          "text": "못해 안해 불가능해.",
           "score": 2
         },
         {
-          "answer": 4,
-          "score": 4
-        },
-        {
-          "answer": 5,
-          "score": 5
-        }
-      ],
-      "answerNum": 0,
-      "id": 8
-    },
-    {
-      "answerScore": [
-        {
-          "answer": 1,
+          "id": 3,
+          "text": "님이 해보셈.",
           "score": 1
         },
         {
-          "answer": 2,
-          "score": 4
-        },
-        {
-          "answer": 3,
+          "id": 4,
+          "text": "오늘 그만 두겠습니다.",
           "score": 5
         },
         {
-          "answer": 4,
+          "id": 5,
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
+        }
+      ],
+      "isChecked": 0
+    },
+    {
+      "id": 9,
+      "title": "9. Question",
+      "question": "다음 말을 해석하시오 \n OOO : 매뉴 누르면 위아래로 슉슉~하고 이동하는 기능 넣는거 어렵나요?",
+      "answer": [
+        {
+          "id": 1,
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
           "score": 3
         },
         {
-          "answer": 5,
+          "id": 2,
+          "text": "못해 안해 불가능해.",
           "score": 2
-        }
-      ],
-      "answerNum": 0,
-      "id": 9
-    },
-    {
-      "answerScore": [
+        },
         {
-          "answer": 1,
+          "id": 3,
+          "text": "님이 해보셈.",
           "score": 1
         },
         {
-          "answer": 2,
+          "id": 4,
+          "text": "오늘 그만 두겠습니다.",
           "score": 5
         },
         {
-          "answer": 3,
-          "score": 2
-        },
-        {
-          "answer": 4,
+          "id": 5,
+          "text": "제가 알려줄테니까 해보실?",
           "score": 4
-        },
-        {
-          "answer": 5,
-          "score": 2
         }
       ],
-      "answerNum": 0,
-      "id": 10
+      "isChecked": 0
     },
     {
-      "answerScore": [
+      "id": 10,
+      "title": "10. Question",
+      "question": "OO님 이거 변수명 ...로 바꾸는게 좋을 것 같아요",
+      "imageUrl": "https://d1orkkc34keaka.cloudfront.net/images/2022/06/21/1655785851_9EDB26BqzeGDKUunhVJBSNKMtGWGrFSTVrhaQuAe.jpeg",
+      "answer": [
         {
-          "answer": 1,
-          "score": 1
-        },
-        {
-          "answer": 2,
+          "id": 1,
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
           "score": 3
         },
         {
-          "answer": 3,
+          "id": 2,
+          "text": "못해 안해 불가능해.",
           "score": 2
         },
         {
-          "answer": 4,
-          "score": 4
-        },
-        {
-          "answer": 5,
-          "score": 5
-        }
-      ],
-      "answerNum": 0,
-      "id": 11
-    },
-    {
-      "answerScore": [
-        {
-          "answer": 1,
-          "score": 2
-        },
-        {
-          "answer": 2,
+          "id": 3,
+          "text": "님이 해보셈.",
           "score": 1
         },
         {
-          "answer": 3,
-          "score": 4
+          "id": 4,
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
         },
         {
-          "answer": 4,
+          "id": 5,
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
+        }
+      ],
+      "isChecked": 0
+    },
+    {
+      "id": 11,
+      "title": "11. Question",
+      "question": "OO님 이거 변수명 ...로 바꾸는게 좋을 것 같아요",
+      "answer": [
+        {
+          "id": 1,
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
           "score": 3
         },
         {
-          "answer": 5,
-          "score": 5
-        }
-      ],
-      "answerNum": 0,
-      "id": 12
-    },
-    {
-      "answerScore": [
-        {
-          "answer": 1,
-          "score": 1
-        },
-        {
-          "answer": 2,
+          "id": 2,
+          "text": "못해 안해 불가능해.",
           "score": 2
         },
         {
-          "answer": 3,
-          "score": 3
-        },
-        {
-          "answer": 4,
-          "score": 4
-        },
-        {
-          "answer": 5,
-          "score": 5
-        }
-      ],
-      "answerNum": 0,
-      "id": 13
-    },
-    {
-      "answerScore": [
-        {
-          "answer": 1,
+          "id": 3,
+          "text": "님이 해보셈.",
           "score": 1
         },
         {
-          "answer": 2,
-          "score": 3
-        },
-        {
-          "answer": 3,
+          "id": 4,
+          "text": "오늘 그만 두겠습니다.",
           "score": 5
         },
         {
-          "answer": 4,
+          "id": 5,
+          "text": "제가 알려줄테니까 해보실?",
           "score": 4
-        },
-        {
-          "answer": 5,
-          "score": 2
         }
       ],
-      "answerNum": 0,
-      "id": 14
+      "isChecked": 0
     },
     {
-      "answerScore": [
+      "id": 12,
+      "title": "12. Question",
+      "question": "OO님 이거 변수명 ...로 바꾸는게 좋을 것 같아요",
+      "answer": [
         {
-          "answer": 1,
+          "id": 1,
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
           "score": 3
         },
         {
-          "answer": 2,
+          "id": 2,
+          "text": "못해 안해 불가능해.",
+          "score": 2
+        },
+        {
+          "id": 3,
+          "text": "님이 해보셈.",
           "score": 1
         },
         {
-          "answer": 3,
-          "score": 2
-        },
-        {
-          "answer": 4,
+          "id": 4,
+          "text": "오늘 그만 두겠습니다.",
           "score": 5
         },
         {
-          "answer": 5,
+          "id": 5,
+          "text": "제가 알려줄테니까 해보실?",
           "score": 4
         }
       ],
-      "answerNum": 0,
-      "id": 15
+      "isChecked": 0
+    },
+    {
+      "id": 13,
+      "title": "13. Question",
+      "question": "OO님 이거 변수명 ...로 바꾸는게 좋을 것 같아요",
+      "answer": [
+        {
+          "id": 1,
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
+        },
+        {
+          "id": 2,
+          "text": "못해 안해 불가능해.",
+          "score": 2
+        },
+        {
+          "id": 3,
+          "text": "님이 해보셈.",
+          "score": 1
+        },
+        {
+          "id": 4,
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
+        },
+        {
+          "id": 5,
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
+        }
+      ],
+      "isChecked": 0
+    },
+    {
+      "id": 14,
+      "title": "14. Question",
+      "question": "OO님 이거 변수명 ...로 바꾸는게 좋을 것 같아요",
+      "answer": [
+        {
+          "id": 1,
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
+        },
+        {
+          "id": 2,
+          "text": "못해 안해 불가능해.",
+          "score": 2
+        },
+        {
+          "id": 3,
+          "text": "님이 해보셈.",
+          "score": 1
+        },
+        {
+          "id": 4,
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
+        },
+        {
+          "id": 5,
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
+        }
+      ],
+      "isChecked": 0
+    },
+    {
+      "id": 15,
+      "title": "15. Question",
+      "question": "OO님 이거 변수명 ...로 바꾸는게 좋을 것 같아요",
+      "answer": [
+        {
+          "id": 1,
+          "text": "가능합니다 불가능하지 않아요 해봐요.",
+          "score": 3
+        },
+        {
+          "id": 2,
+          "text": "못해 안해 불가능해.",
+          "score": 2
+        },
+        {
+          "id": 3,
+          "text": "님이 해보셈.",
+          "score": 1
+        },
+        {
+          "id": 4,
+          "text": "오늘 그만 두겠습니다.",
+          "score": 5
+        },
+        {
+          "id": 5,
+          "text": "제가 알려줄테니까 해보실?",
+          "score": 4
+        }
+      ],
+      "isChecked": 0
     }
   ]
 }
