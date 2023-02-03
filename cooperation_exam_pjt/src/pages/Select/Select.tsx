@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Select() {
   const [examType, setExamType] = useState('');
-  console.log('examType:', examType);
+
   const selectExam = (e: React.MouseEvent<HTMLButtonElement>) => {
     switch (e.currentTarget.innerHTML) {
       case '백':
@@ -33,7 +33,7 @@ function Select() {
         </SelectBtn>
       </SelectBtnBox>
       <Link to={`/question/${examType}/1`}>
-        <NextBtn>NEXT</NextBtn>
+        {examType !== '' && <NextBtn>NEXT</NextBtn>}
       </Link>
     </Container>
   );

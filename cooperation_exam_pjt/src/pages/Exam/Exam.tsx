@@ -8,8 +8,8 @@ function Exam() {
   const [checkedNum, setCheckedNum] = useState<number>();
   const params = useParams();
   const navigate = useNavigate();
+  const requestUrl = `${params.type}/${params.id}`;
 
-  console.log('id:', params);
   type examListData = {
     id: Number;
     title: string;
@@ -22,7 +22,7 @@ function Exam() {
   const postAnswer = (CheckNum: number) => {
     setCheckedNum(CheckNum);
 
-    fetch(`http://localhost:4000/${params.type}/${params.id}`, {
+    fetch(`http://localhost:4000/${requestUrl}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -35,18 +35,19 @@ function Exam() {
 
   const goNextLink = () => {
     {
-      Number(params) < 15
-        ? navigate(`/question/${Number(params) + 1}`)
-        : navigate('/result');
+      Number(params.id) < 15
+        ? navigate(`/question/${params.type}/${Number(params.id) + 1}`)
+        : navigate(`/${params.type}/result`);
     }
   };
 
   const goPrevLink = () => {
-    navigate(`/question/${Number(params) - 1}`);
+    navigate(`/question/${params.type}/${Number(params.id) - 1}`);
   };
 
   useEffect(() => {
-    fetch(`http://localhost:4000/frontend/${Number(params.id)}`)
+    console.log('type:', params.type);
+    fetch(`http://localhost:4000/${requestUrl}`)
       .then((res) => res.json())
       .then((data) => (setExamList(data), setCheckedNum(data.isChecked)))
       .then(() => setIsLoading(false));
