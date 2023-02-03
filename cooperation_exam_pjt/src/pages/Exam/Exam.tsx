@@ -46,7 +46,6 @@ function Exam() {
   };
 
   useEffect(() => {
-    console.log('type:', params.type);
     fetch(`http://localhost:4000/${requestUrl}`)
       .then((res) => res.json())
       .then((data) => (setExamList(data), setCheckedNum(data.isChecked)))
