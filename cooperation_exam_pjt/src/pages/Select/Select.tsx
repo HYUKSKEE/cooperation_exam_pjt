@@ -32,7 +32,7 @@ function Select() {
           프
         </SelectBtn>
       </SelectBtnBox>
-      <Link to={`/question/${examType}/1`}>
+      <Link to={`/${examType}/1`}>
         {examType !== '' && <NextBtn>NEXT</NextBtn>}
       </Link>
     </Container>

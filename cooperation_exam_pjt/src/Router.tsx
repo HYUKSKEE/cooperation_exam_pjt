@@ -15,7 +15,7 @@ const Router = (): JSX.Element => {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/select" element={<Select />} />
-          <Route path="/question/:type/:id" element={<Exam />} />
+          <Route path="/:type/:id" element={<Exam />} />
           <Route path="/:type/result" element={<Result />} />
         </Routes>
         <Footer />
