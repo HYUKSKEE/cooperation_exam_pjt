@@ -36,13 +36,13 @@ function Exam() {
   const goNextLink = () => {
     {
       Number(params.id) < 15
-        ? navigate(`/question/${params.type}/${Number(params.id) + 1}`)
+        ? navigate(`/${params.type}/${Number(params.id) + 1}`)
         : navigate(`/${params.type}/result`);
     }
   };
 
   const goPrevLink = () => {
-    navigate(`/question/${params.type}/${Number(params.id) - 1}`);
+    navigate(`/${params.type}/${Number(params.id) - 1}`);
   };
 
   useEffect(() => {
