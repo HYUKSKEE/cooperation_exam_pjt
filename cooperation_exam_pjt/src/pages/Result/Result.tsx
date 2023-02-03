@@ -10,14 +10,30 @@ function Result() {
     .map((el: { score: number }) => el.score)
     .reduce((acc, cur) => acc + cur, 0);
 
+  const USER_NAME = 'Hyukskee';
+
+  const gradeLevel = (score: number, user: string) => {
+    if (score === 0) return;
+
+    if (score < 16) {
+      return <MockList>{`${user}님은 꼭 혼자 일하세요..하..`}</MockList>;
+    } else if (score < 30) {
+      return <MockList>{`${user}님은 저희와 함께할 수 없습니다.`}</MockList>;
+    } else if (score < 60) {
+      return <MockList>{`${user}님은 같이 일하고 싶은 사람입니다.`}</MockList>;
+    } else {
+      return <MockList>{`${user}님은 협업의 신 입니다.`}</MockList>;
+    }
+  };
+
   useEffect(() => {
     fetch(`http://localhost:4000/${params.type}`)
       .then((res) => res.json())
       .then((data) =>
         setResultList(
           data.map(
-            (list: { isChecked: number; answer: object[] }) =>
-              list.answer.filter((el: any) => el.id === list.isChecked)[0],
+            (list: { isChecked: number; answer: { id: number }[] }) =>
+              list.answer.filter((el) => el.id === list.isChecked)[0],
           ),
         ),
       );
@@ -27,12 +43,12 @@ function Result() {
     <Container>
       <Wrap>
         <Title>결과 보기</Title>
-        <MockList>00님의 점수는 {totalScore} 점 입니다.</MockList>
+        <MockList>{gradeLevel(totalScore, USER_NAME)}</MockList>
         {/* <MockList>상황 대처 : 25</MockList>
         <MockList>소프트 스킬 : 25</MockList>
         <MockList>타 업무 이해도 : 25</MockList>
-        <MockList>친화력 : 25</MockList> */}
-        <MockList>당신은 협업의 "신" 입니다</MockList>
+        <MockList>친화력 : 25</MockList>
+        <MockList>당신은 협업의 "신" 입니다</MockList> */}
       </Wrap>
       <ShareLinkBox>
         <MockBtn />
@@ -63,7 +79,9 @@ const Wrap = styled.div`
 `;
 
 const MockList = styled.div`
-  width: 50%;
+  width: 100%;
+  margin: 20px 0px 10px 0px;
+  text-align: center;
 `;
 
 const Title = styled.h1`
