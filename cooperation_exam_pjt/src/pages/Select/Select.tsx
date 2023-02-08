@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { postUserData } from '../../api/api';
 
 function Select() {
   const [examType, setExamType] = useState('');
-
+  const navigate = useNavigate();
   const selectExam = (e: React.MouseEvent<HTMLButtonElement>) => {
     switch (e.currentTarget.innerHTML) {
       case '백':
@@ -15,6 +16,11 @@ function Select() {
         setExamType('frontend');
         break;
     }
+  };
+
+  const goQuestionPage = () => {
+    postUserData(1, '김진혁스키', examType, 0);
+    navigate(`/${examType}/1`);
   };
   return (
     <Container>
@@ -32,9 +38,7 @@ function Select() {
           프
         </SelectBtn>
       </SelectBtnBox>
-      <Link to={`/${examType}/1`}>
-        {examType !== '' && <NextBtn>NEXT</NextBtn>}
-      </Link>
+      {examType !== '' && <NextBtn onClick={goQuestionPage}>NEXT</NextBtn>}
     </Container>
   );
 }
