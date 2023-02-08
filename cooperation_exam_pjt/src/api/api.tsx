@@ -26,12 +26,12 @@ export const getExam = (
 };
 
 export const modifyDefaultAnswer = (
-  examType: string,
-  qNum: number,
-  checkNum: number,
+  examType: string | undefined,
+  qNum: string | undefined,
+  checkNum: number | undefined,
 ) => {
   request({
-    method: 'patch',
+    method: 'PATCH',
     url: `/${examType}/${qNum}`,
     data: {
       isChecked: checkNum,
@@ -39,4 +39,20 @@ export const modifyDefaultAnswer = (
   });
 };
 
-//export default { getExam, modifyDefaultAnswer };
+export const postUserData = (
+  id: number | undefined,
+  userName: string | undefined,
+  examType: string | undefined,
+  checkNum: any,
+) => {
+  request({
+    method: 'POST',
+    url: `/userData`,
+    data: {
+      id: +1,
+      name: userName,
+      examType: examType,
+      score: checkNum,
+    },
+  });
+};

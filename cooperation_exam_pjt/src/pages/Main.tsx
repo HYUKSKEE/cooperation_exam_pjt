@@ -1,17 +1,32 @@
-import { useEffect } from 'react';
+import { ChangeEventHandler, useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { postUserData } from '../api/api';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 function Main() {
+  const [userName, setUserName] = useState<string>('');
+  const navigate = useNavigate();
+
+  const saveUserName: ChangeEventHandler<HTMLInputElement> = (e) => {
+    setUserName(e.currentTarget.value);
+  };
+
+  const goSelectPage = () => {
+    postUserData(1, userName, '', 0);
+    navigate('/select');
+  };
   return (
     <Container>
       <MainWrap>
         <Image src="images/hands.jpg" alt="" />
-        <Input type="text" placeholder="이름 입력" />
+        <Input
+          type="text"
+          placeholder="이름 입력"
+          value={userName}
+          onChange={(e) => saveUserName(e)}
+        />
         <Title> 당신의 협업 능력은 몇 점인가요?</Title>
-        <Link to="/select">
-          <Button>시작하기</Button>
-        </Link>
+        <Button onClick={goSelectPage}>시작하기</Button>
       </MainWrap>
     </Container>
   );

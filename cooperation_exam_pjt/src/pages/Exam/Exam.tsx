@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import { getExam } from '../../api/api';
+import { getExam, modifyDefaultAnswer } from '../../api/api';
 
 function Exam() {
   const [examList, setExamList] = useState<examListData>();
@@ -9,7 +9,6 @@ function Exam() {
   const [checkedNum, setCheckedNum] = useState<number>();
   const params = useParams();
   const navigate = useNavigate();
-  const requestUrl = `${params.type}/${params.id}`;
 
   type examListData = {
     id: Number;
@@ -20,10 +19,10 @@ function Exam() {
     isChecked: number;
   };
 
-  const postAnswer = (checkNum: number) => {
+  const saveAnswer = (checkNum: number) => {
     setCheckedNum(checkNum);
 
-    fetch(`http://localhost:4000/${requestUrl}`, {
+    /* fetch(`http://localhost:4000/${requestUrl}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -31,10 +30,11 @@ function Exam() {
       }),
     })
       .then((response) => response.json())
-      .then((result) => console.log(result));
+      .then((result) => console.log(result)); */
   };
 
   const goNextLink = () => {
+    modifyDefaultAnswer(params.type, params.id, checkedNum);
     {
       Number(params.id) < 15
         ? navigate(`/${params.type}/${Number(params.id) + 1}`)
@@ -66,7 +66,7 @@ function Exam() {
               return (
                 <Answer
                   key={answer.id}
-                  onClick={() => postAnswer(answer.id)}
+                  onClick={() => saveAnswer(answer.id)}
                   active={answer.id === checkedNum ? true : false}
                 >
                   {answer.id}. {answer.text}
