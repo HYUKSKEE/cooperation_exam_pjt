@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
+import { getExam } from '../../api/api';
 
 function Exam() {
   const [examList, setExamList] = useState<examListData>();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [checkedNum, setCheckedNum] = useState<number>();
   const params = useParams();
   const navigate = useNavigate();
@@ -19,14 +20,14 @@ function Exam() {
     isChecked: number;
   };
 
-  const postAnswer = (CheckNum: number) => {
-    setCheckedNum(CheckNum);
+  const postAnswer = (checkNum: number) => {
+    setCheckedNum(checkNum);
 
     fetch(`http://localhost:4000/${requestUrl}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        isChecked: CheckNum,
+        isChecked: checkNum,
       }),
     })
       .then((response) => response.json())
@@ -46,11 +47,8 @@ function Exam() {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:4000/${requestUrl}`)
-      .then((res) => res.json())
-      .then((data) => (setExamList(data), setCheckedNum(data.isChecked)))
-      .then(() => setIsLoading(false));
-  }, [params, isLoading]);
+    getExam(params.type, params.id, setIsLoading, setExamList, setCheckedNum);
+  }, [params]);
 
   return (
     <Container>
