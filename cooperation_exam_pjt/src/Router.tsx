@@ -9,7 +9,7 @@ import Result from './pages/Result/Result';
 
 const Router = (): JSX.Element => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <Wrap>
         <Header />
         <Routes>
