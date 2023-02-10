@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Main from './pages/Main';
 import Select from './pages/Select/Select';
 import styled from 'styled-components';
@@ -9,18 +9,18 @@ import Result from './pages/Result/Result';
 
 const Router = (): JSX.Element => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename="/">
       <Wrap>
         <Header />
         <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/select" element={<Select />} />
-          <Route path="/:type/:id" element={<Exam />} />
-          <Route path="/:type/result" element={<Result />} />
+          <Route path="" element={<Main />} />
+          <Route path="select" element={<Select />} />
+          <Route path=":type/:id" element={<Exam />} />
+          <Route path=":type/result" element={<Result />} />
         </Routes>
         <Footer />
       </Wrap>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
