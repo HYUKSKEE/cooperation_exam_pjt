@@ -1,8 +1,8 @@
 import axios from 'axios';
-import BASE_URL from '../../../env';
+import BASE_URL from '../../env';
 
 const request: any = axios.create({
-  baseURL: BASE_URL,
+  baseURL: BASE_URL || 'http://localhost:4000',
 });
 
 request.defaults.timeout = 2500;
