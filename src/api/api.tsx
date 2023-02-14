@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
+import BASE_URL from '../env';
 import request from './core/axiosInstance';
 
 type examListData = {
@@ -17,6 +18,7 @@ export const getExam = (
   setExamList: Dispatch<React.SetStateAction<examListData | undefined>>,
   setCheckedNum: Dispatch<SetStateAction<number | undefined>>,
 ) => {
+  console.log('BASE_URL :', BASE_URL);
   return request({ url: `/${examType}/${qNum}` })
     .then((res: examListData) => {
       setExamList(res);
