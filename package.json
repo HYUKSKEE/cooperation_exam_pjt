@@ -26,7 +26,7 @@
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
-    "homepage": "https://hyukskee.github.io/cooperation_exam_pjt"
+    "homepage": "https://hyukskee.github.io/cooperation_exam_pjt/cooperation_exam_pjt"
   },
   "eslintConfig": {
     "extends": [
