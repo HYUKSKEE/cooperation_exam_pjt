@@ -61,7 +61,7 @@ function Exam() {
               {`Q${examList?.id} . `}
               {examList?.question}
             </Question>
-            {examList?.imageUrl && <Image src={examList?.imageUrl} alt="" />}
+            {examList?.imageUrl && <Image src={examList?.imageUrl} alt='' />}
             {examList?.answer?.map((answer: any) => {
               return (
                 <Answer
@@ -74,9 +74,7 @@ function Exam() {
               );
             })}
             <ButtonBox>
-              {Number(params.id) !== 1 && (
-                <Btn onClick={goPrevLink}>{`< PREV`}</Btn>
-              )}
+              {Number(params.id) !== 1 && <Btn onClick={goPrevLink}>{`< PREV`}</Btn>}
               {checkedNum !== 0 && <Btn onClick={goNextLink}>{`NEXT >`}</Btn>}
             </ButtonBox>
           </>

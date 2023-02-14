@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 function Footer() {
-  return (
-    <Container>ⓒ2023 designed by hyukskee | all rights reserved</Container>
-  );
+  return <Container>ⓒ2023 designed by hyukskee | all rights reserved</Container>;
 }
 
 export default Footer;
