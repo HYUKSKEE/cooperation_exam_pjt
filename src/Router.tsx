@@ -13,10 +13,10 @@ const Router = (): JSX.Element => {
       <Wrap>
         <Header />
         <Routes>
-          <Route path='' element={<Main />} />
-          <Route path='/select' element={<Select />} />
-          <Route path='/:type/:id' element={<Exam />} />
-          <Route path='/:type/result' element={<Result />} />
+          <Route path="" element={<Main />} />
+          <Route path="/select" element={<Select />} />
+          <Route path="/:type/:id" element={<Exam />} />
+          <Route path="/:type/result" element={<Result />} />
         </Routes>
         <Footer />
       </Wrap>

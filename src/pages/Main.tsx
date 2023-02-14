@@ -18,8 +18,13 @@ function Main() {
   return (
     <Container>
       <MainWrap>
-        <Image src='images/hands.jpg' alt='' />
-        <Input type='text' placeholder='이름 입력' value={userName} onChange={(e) => saveUserName(e)} />
+        <Image src="images/hands.jpg" alt="" />
+        <Input
+          type="text"
+          placeholder="이름 입력"
+          value={userName}
+          onChange={(e) => saveUserName(e)}
+        />
         <Title> 당신의 협업 능력은 몇 점인가요?</Title>
         <Button onClick={goSelectPage}>시작하기</Button>
       </MainWrap>
