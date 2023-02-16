@@ -11,7 +11,7 @@ function Exam() {
   const navigate = useNavigate();
 
   type examListData = {
-    id: Number;
+    id: number;
     title: string;
     question: string;
     imageUrl: string;
@@ -35,11 +35,10 @@ function Exam() {
 
   const goNextLink = () => {
     modifyDefaultAnswer(params.type, params.id, checkedNum);
-    {
-      Number(params.id) < 15
-        ? navigate(`/${params.type}/${Number(params.id) + 1}`)
-        : navigate(`/${params.type}/result`);
-    }
+
+    Number(params.id) < 15
+      ? navigate(`/${params.type}/${Number(params.id) + 1}`)
+      : navigate(`/${params.type}/result`);
   };
 
   const goPrevLink = () => {
