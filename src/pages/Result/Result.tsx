@@ -6,7 +6,9 @@ function Result() {
   const [resultList, setResultList] = useState([]);
   const params = useParams();
 
-  const totalScore = resultList.map((el: { score: number }) => el.score).reduce((acc, cur) => acc + cur, 0);
+  const totalScore = resultList
+    .map((el: { score: number }) => el.score)
+    .reduce((acc, cur) => acc + cur, 0);
 
   const USER_NAME = 'Hyukskee';
 

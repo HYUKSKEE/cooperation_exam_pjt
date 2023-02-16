@@ -3,7 +3,7 @@ import BASE_URL from '../env';
 import request from './core/axiosInstance';
 
 type examListData = {
-  id: Number;
+  id: number;
   title: string;
   question: string;
   imageUrl: string;
